@@ -1,0 +1,17 @@
+
+<h2>Beléptető</h2>
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+  <div>
+      <label for="name" class="form-label">Név:</label>
+      <input id="name" formControlName="name" type="text" class="form-control"/>
+  </div>
+
+  <div>
+      <label for="password" class="form-label">Jelszó:</label>
+      <input id="password" formControlName="password" type="text" class="form-control"/>
+  </div>
+
+  <div>
+    <button type="submit" class="btn btn-primary mt-2">Belépés</button>
+  </div>
+</form>

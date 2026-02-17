@@ -2,10 +2,11 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { DrinkComponent } from './drink/drink.component';
 import { LoginComponent } from './login/login.component';
+import { authGuard } from './shared/auth-guard';
 
 export const routes: Routes = [
     {path: "", component: HomeComponent},
     {path: "home", component: HomeComponent},
     {path: "login", component: LoginComponent},
-    {path: "drink", component: DrinkComponent},
+    {path: "drink", component: DrinkComponent, canActivate: [authGuard]},
 ];

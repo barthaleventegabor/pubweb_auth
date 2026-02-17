@@ -1,0 +1,16 @@
+
+@media screen and (max-width: 600px) {
+    table, tbody, th, td, tr{
+        display: block;
+    }
+    thead{
+        display: none;
+    }
+
+    td::before{
+        content: attr(data-column);
+        font-weight: bold;
+        float: left;
+        width: 45%;
+    }
+}
